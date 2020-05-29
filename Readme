@@ -4,6 +4,7 @@ water out of a reservoir as needed, monitors the reservoir water level, monitors
 annunciates when water is low.
 The device can be used in later classes as an IoT device after adding a wireless transceiver.
 Most parts for the project, except the flower pot, water bottle, and ARM controller will be provided.
+
 ### Hardware
 The project will consist of a single board containing sockets for the M4F board, pump motor driver and
 pump, moisture signal conditioning circuit, reservoir level monitoring interface circuit, speaker driver,
@@ -30,3 +31,30 @@ alert LIGHT_LEVEL Sets the light level above which the beeper will sound if wate
 time H M Sets the time of the lock
 water H1 M1 H2 M2 Sets the time window (>H1:M1 and < H2:M2) in which the watering can
 occur
+
+Parts List:
+1. EK-TM4C123GXL controller board 1
+2. Pump  1
+3. 100KK 2p Header 1 
+4. Vinyl tubing (1/4” OD x 3/16” ID x 3’ 1
+5. Brass rods 1/8” OD x 3” long (electrodes) 2
+6. Wooden block 1.5” x 0.5” x 0.5” (holds electrodes) 1
+7. 1’ copper foil (for 2 capacitor plates, optional shield) 1
+8. Polyethylene film (dielectric under shield – optional) 1
+9. Packing tape (optional – holds dielectric in place) 1
+10. 100kohm resistor (capacitive current source, battery sense) 2
+11. TEPT5600 ambient light sensor 1
+12. 1kohm resistor (emitter resistor for light sensor) 1
+13. 10kohm resistor (for soil sensor) 1
+14. AT-1127-ST-2-R transducer 1
+15. 100ohm resistor (speaker current limit) 1
+16. 470ohm resistor (speaker, motor driver base resistor, deintegrate base resistor) 3
+17. 10uF capacitor (speaker AC coupler) 1
+18. 2N3904 (speaker driver, deintegration) 1
+19. FQP20N06L (logic-level MOSFET for pump motor driver) 1
+20. 47kohm resistor (MOSFET gate pull-down, battery sense) 2
+21. 1N4004 (motor flyback diode) 1
+22. 10x2 100mil pitch unshrouded header 2 (now 0)
+23. Various colors of wire 1
+24. PC board (3x5” or larger recommended) (replaced with breadboard) 1
+25. 4 D cell battery holder 0 (now 1)
