@@ -1,0 +1,32 @@
+### Overview
+The goal of this project is to build a device that monitors the moisture of the soil in a flower pot, pumps
+water out of a reservoir as needed, monitors the reservoir water level, monitors light levels, and
+annunciates when water is low.
+The device can be used in later classes as an IoT device after adding a wireless transceiver.
+Most parts for the project, except the flower pot, water bottle, and ARM controller will be provided.
+### Hardware
+The project will consist of a single board containing sockets for the M4F board, pump motor driver and
+pump, moisture signal conditioning circuit, reservoir level monitoring interface circuit, speaker driver,
+speaker, and optional battery pack.
+The pump will be controlled by a logic-level MOSFET.
+The speaker driver uses a BJT whose output is capacitively coupled to the speaker.
+The soil moisture sensor is based on resistance measurements.
+The reservoir level detection circuit using the fringe-effect electric field of a capacitor along with an
+integrator circuit to measure the fluid level.
+The ambient light sensor uses silicon based sensor and current-to-voltage conversion to measure the
+light level.
+The battery level circuit uses a simple voltage divider circuit.
+
+The software will support the following functionality:
+###UART Commands
+The virtual COM port connected to UART0 will deliver these instructions:
+Commands
+level Sets the moisture level below which watering occurs
+status Returns the level of the water in the reservoir (mL), the moisture level of
+the soil (0% equals dry soil, 100% equals saturated soil), and light level (%
+relative to reference light source), battery level (V)
+pump ON|OFF Manually turns pump on and off
+alert LIGHT_LEVEL Sets the light level above which the beeper will sound if water is low
+time H M Sets the time of the lock
+water H1 M1 H2 M2 Sets the time window (>H1:M1 and < H2:M2) in which the watering can
+occur
